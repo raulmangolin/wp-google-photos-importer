@@ -27,30 +27,13 @@
     "squizlabs/php_codesniffer": "3.*"
   },
   "scripts": {
-    "post-update-cmd": "Google\\Task\\Composer::cleanup",
-    "phpcs-install-standards": [
-      "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
-      "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs,vendor/wpforms/phpcs-ruleset,vendor/phpcompatibility/php-compatibility"
-    ],
-    "dev-composer-install": [
-      "@composer install --prefer-dist --no-scripts",
-      "@phpcs-install-standards"
-    ]
+    "post-update-cmd": "Google\\Task\\Composer::cleanup"
   },
   "extra": {
     "google/apiclient-services": [
       "Firestore",
       "Gmail",
       "PhotosLibrary"
-    ],
-    "merge-plugin": {
-      "recurse": true,
-      "replace": false,
-      "ignore-duplicates": false,
-      "merge-dev": true,
-      "merge-extra": true,
-      "merge-extra-deep": false,
-      "merge-scripts": true
-    }
+    ]
   }
 }
