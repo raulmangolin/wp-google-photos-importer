@@ -8,13 +8,13 @@
 	 * registers the activation and deactivation functions, and defines a function
 	 * that starts the plugin.
 	 *
-	 * @link              https://github.com/raulmangolin/WP-Google-Photos-Importer
+	 * @link              https://github.com/raulmangolin/wp-google-photos-importer
 	 * @since             1.0.0
 	 * @package           Wp_Google_Photos_Importer
 	 *
 	 * @wordpress-plugin
 	 * Plugin Name:       Wordpress Google Photos Importer
-	 * Plugin URI:        https://github.com/raulmangolin/WP-Google-Photos-Importer
+	 * Plugin URI:        https://github.com/raulmangolin/wp-google-photos-importer
 	 * Description:       Import your Google Photos albums to your Wordpress media gallery
 	 * Version:           1.0.0
 	 * Author:            Raul Mangolin

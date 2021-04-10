@@ -19,7 +19,7 @@
 	 * For more information, see the following discussion:
 	 * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
 	 *
-	 * @link       https://github.com/raulmangolin/WP-Google-Photos-Importer
+	 * @link       https://github.com/raulmangolin/wp-google-photos-importer
 	 * @since      1.0.0
 	 *
 	 * @package    Wp_Google_Photos_Importer

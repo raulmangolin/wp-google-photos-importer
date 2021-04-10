@@ -1,1 +1,1 @@
-# Wordpress Google Photos Importer [![Build Status](https://travis-ci.com/raulmangolin/WP-Google-Photos-Importer.svg?branch=master)](https://travis-ci.com/raulmangolin/WP-Google-Photos-Importer)
+# Wordpress Google Photos Importer [![Build Status](https://travis-ci.com/raulmangolin/wp-google-photos-importer.svg?branch=master)](https://travis-ci.com/raulmangolin/wp-google-photos-importer)

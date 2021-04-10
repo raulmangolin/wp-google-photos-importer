@@ -2,7 +2,7 @@
   "name": "raulmangolin/wp-google-photos-importer",
   "description": "Import your Google Photos albums to your Wordpress media gallery",
   "type": "wordpress-plugin",
-  "homepage": "https://github.com/raulmangolin/WP-Google-Photos-Importer",
+  "homepage": "https://github.com/raulmangolin/wp-google-photos-importer",
   "license": "GPL-3.0-or-later",
   "minimum-stability": "stable",
   "prefer-stable": true,

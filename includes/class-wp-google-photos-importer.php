@@ -6,7 +6,7 @@
 	 * A class definition that includes attributes and functions used across both the
 	 * public-facing side of the site and the admin area.
 	 *
-	 * @link       https://github.com/raulmangolin/WP-Google-Photos-Importer
+	 * @link       https://github.com/raulmangolin/wp-google-photos-importer
 	 * @since      1.0.0
 	 *
 	 * @package    Wp_Google_Photos_Importer
