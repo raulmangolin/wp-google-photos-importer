@@ -42,6 +42,7 @@ matrix:
   # Jobs that are permitted to fail without breaking the build
   allow_failures:
     - name: Bleeding edge
+    - name: Legacy
 
 before_install:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
