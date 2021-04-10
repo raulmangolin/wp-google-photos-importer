@@ -42,20 +42,6 @@
   },
   "scripts": {
     "post-update-cmd": "Google\\Task\\Composer::cleanup",
-    "php-compatibility-lite" : [
-      "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
-      "vendor/bin/phpcs -p ./*.php ./src/* --ignore='./src/Pro/' --standard=PHPCompatibility --runtime-set ignore_warnings_on_exit true --runtime-set testVersion 5.6-"
-    ],
-    "php-compatibility-pro" : [
-      "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
-      "vendor/bin/phpcs -p ./*.php ./src/* --standard=PHPCompatibility --runtime-set ignore_warnings_on_exit true --runtime-set testVersion 5.6-"
-    ],
-    "php-compatibility" : [
-      "@php-compatibility-lite",
-      "@php-compatibility-pro"
-    ],
-    "pre-install-cmd": "@create-vendor-prefix-folder",
-    "pre-update-cmd": "@create-vendor-prefix-folder",
     "phpcs-install-standards": [
       "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
       "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs,vendor/wpforms/phpcs-ruleset,vendor/phpcompatibility/php-compatibility"
@@ -64,8 +50,6 @@
       "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
       "@composer --working-dir=php-scoper install",
       "php-scoper/vendor/bin/php-scoper add-prefix --config=php-scoper/config.php --output-dir=./vendor_prefixed --force",
-      "npm run gulp composer:delete_prefixed_vendor_libraries",
-      "npm run gulp prefix_outside_files",
       "@composer dump-autoload"
     ],
     "prefix-dependencies-lite": [
@@ -73,7 +57,6 @@
       "@composer dump-autoload --no-plugins"
     ],
     "dev-composer-install": [
-      "@create-vendor-prefix-folder",
       "@composer install --prefer-dist --no-scripts",
       "@prefix-dependencies",
       "@phpcs-install-standards"
