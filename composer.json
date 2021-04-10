@@ -16,19 +16,6 @@
       "email": "eu@raulmangolin.dev"
     }
   ],
-  "repositories": [
-    {
-      "type": "path",
-      "url": ".packages/composer/phpcs-ruleset"
-    },
-    {
-      "type": "path",
-      "url": ".packages/composer/phpcs-diff",
-      "options": {
-        "symlink": true
-      }
-    }
-  ],
   "require": {
     "composer/installers": "~1.0",
     "google/apiclient": "^2.7"
@@ -46,19 +33,8 @@
       "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
       "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs,vendor/wpforms/phpcs-ruleset,vendor/phpcompatibility/php-compatibility"
     ],
-    "prefix-dependencies": [
-      "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
-      "@composer --working-dir=php-scoper install",
-      "php-scoper/vendor/bin/php-scoper add-prefix --config=php-scoper/config.php --output-dir=./vendor_prefixed --force",
-      "@composer dump-autoload"
-    ],
-    "prefix-dependencies-lite": [
-      "@prefix-dependencies",
-      "@composer dump-autoload --no-plugins"
-    ],
     "dev-composer-install": [
       "@composer install --prefer-dist --no-scripts",
-      "@prefix-dependencies",
       "@phpcs-install-standards"
     ]
   },
