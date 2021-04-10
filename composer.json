@@ -2,24 +2,96 @@
   "name": "raulmangolin/wp-google-photos-importer",
   "description": "Import your Google Photos albums to your Wordpress media gallery",
   "type": "wordpress-plugin",
+  "homepage": "https://github.com/raulmangolin/WP-Google-Photos-Importer",
+  "license": "GPL-3.0-or-later",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
   "authors": [
     {
       "name": "Raul Mangolin",
       "email": "eu@raulmangolin.dev"
     }
   ],
+  "repositories": [
+    {
+      "type": "path",
+      "url": ".packages/composer/phpcs-ruleset"
+    },
+    {
+      "type": "path",
+      "url": ".packages/composer/phpcs-diff",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
   "require": {
     "composer/installers": "~1.0",
     "google/apiclient": "^2.7"
   },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "0.6.2",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "wp-coding-standards/wpcs": "2.3.0"
+  },
   "scripts": {
-    "post-update-cmd": "Google\\Task\\Composer::cleanup"
+    "post-update-cmd": "Google\\Task\\Composer::cleanup",
+    "php-compatibility-lite" : [
+      "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
+      "vendor/bin/phpcs -p ./*.php ./src/* --ignore='./src/Pro/' --standard=PHPCompatibility --runtime-set ignore_warnings_on_exit true --runtime-set testVersion 5.6-"
+    ],
+    "php-compatibility-pro" : [
+      "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
+      "vendor/bin/phpcs -p ./*.php ./src/* --standard=PHPCompatibility --runtime-set ignore_warnings_on_exit true --runtime-set testVersion 5.6-"
+    ],
+    "php-compatibility" : [
+      "@php-compatibility-lite",
+      "@php-compatibility-pro"
+    ],
+    "pre-install-cmd": "@create-vendor-prefix-folder",
+    "pre-update-cmd": "@create-vendor-prefix-folder",
+    "phpcs-install-standards": [
+      "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
+      "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs,vendor/wpforms/phpcs-ruleset,vendor/phpcompatibility/php-compatibility"
+    ],
+    "prefix-dependencies": [
+      "\\InstituteWeb\\ComposerScripts\\ImprovedScriptExecution::apply",
+      "@composer --working-dir=php-scoper install",
+      "php-scoper/vendor/bin/php-scoper add-prefix --config=php-scoper/config.php --output-dir=./vendor_prefixed --force",
+      "npm run gulp composer:delete_prefixed_vendor_libraries",
+      "npm run gulp prefix_outside_files",
+      "@composer dump-autoload"
+    ],
+    "prefix-dependencies-lite": [
+      "@prefix-dependencies",
+      "@composer dump-autoload --no-plugins"
+    ],
+    "dev-composer-install": [
+      "@create-vendor-prefix-folder",
+      "@composer install --prefer-dist --no-scripts",
+      "@prefix-dependencies",
+      "@phpcs-install-standards"
+    ]
   },
   "extra": {
     "google/apiclient-services": [
       "Firestore",
       "Gmail",
       "PhotosLibrary"
-    ]
+    ],
+    "merge-plugin": {
+      "recurse": true,
+      "replace": false,
+      "ignore-duplicates": false,
+      "merge-dev": true,
+      "merge-extra": true,
+      "merge-extra-deep": false,
+      "merge-scripts": true
+    },
+    "phpcodesniffer-search-depth": 1
   }
 }
