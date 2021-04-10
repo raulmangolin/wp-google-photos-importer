@@ -22,9 +22,10 @@
   },
   "require-dev": {
     "phpcompatibility/php-compatibility": "^9.3",
-    "wp-coding-standards/wpcs": "2.3.0",
+    "phpcompatibility/phpcompatibility-wp": "*",
     "phpunit/phpunit": "^7.5",
-    "squizlabs/php_codesniffer": "3.*"
+    "squizlabs/php_codesniffer": "3.*",
+    "wp-coding-standards/wpcs": "2.3.0"
   },
   "scripts": {
     "post-update-cmd": "Google\\Task\\Composer::cleanup"
