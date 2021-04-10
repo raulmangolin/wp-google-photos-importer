@@ -27,7 +27,7 @@
 
     $('#wp-gpi-import-photos').unbind('click').on('click', function (e) {
       e.preventDefault();
-      // $('#wp-gpi-import-photos').unbind('click');
+      $('#wp-gpi-import-photos').unbind('click');
       $('#wp-gpi-import-photos').text('Importing...');
       $('#wp-gpi-import-photos').attr('disabled', 'disabled');
 
