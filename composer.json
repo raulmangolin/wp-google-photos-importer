@@ -21,7 +21,6 @@
     "google/apiclient": "^2.7"
   },
   "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "0.6.2",
     "phpcompatibility/php-compatibility": "^9.3",
     "wp-coding-standards/wpcs": "2.3.0",
     "phpunit/phpunit": "^7.5",
@@ -52,7 +51,6 @@
       "merge-extra": true,
       "merge-extra-deep": false,
       "merge-scripts": true
-    },
-    "phpcodesniffer-search-depth": 1
+    }
   }
 }
