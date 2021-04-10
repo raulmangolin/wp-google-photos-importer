@@ -63,8 +63,11 @@ script:
       WP_MULTISITE=1 phpunit
     fi
   - |
-    if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      phpcs
+    # If we've set the $WP_TRAVISCI variable to run PHPCS, do that instead
+    # of running PHPUnit.
+    if [[ "$WP_TRAVISCI" == "phpcs" ]]; then
+      ./vendor/bin/phpcs
+
     else
       # Execute the test suite
       ./vendor/bin/phpunit
