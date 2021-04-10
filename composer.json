@@ -1,0 +1,25 @@
+{
+  "name": "raulmangolin/wp-google-photos-importer",
+  "description": "Import your Google Photos albums to your Wordpress media gallery",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Raul Mangolin",
+      "email": "eu@raulmangolin.dev"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0",
+    "google/apiclient": "^2.7"
+  },
+  "scripts": {
+    "post-update-cmd": "Google\\Task\\Composer::cleanup"
+  },
+  "extra": {
+    "google/apiclient-services": [
+      "Firestore",
+      "Gmail",
+      "PhotosLibrary"
+    ]
+  }
+}
