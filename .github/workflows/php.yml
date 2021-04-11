@@ -23,6 +23,7 @@ jobs:
       with:
         path: vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        php_version: 7.2
         restore-keys: |
           ${{ runner.os }}-php-
 
