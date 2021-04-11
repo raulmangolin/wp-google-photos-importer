@@ -1,5 +1,7 @@
-# Wordpress Google Photos Importer Plugin [![Build Status](https://travis-ci.com/raulmangolin/wp-google-photos-importer.svg?branch=master)](https://travis-ci.com/raulmangolin/wp-google-photos-importer)
-Import your photos from Google Photos to Wordpress media gallery
+# Wordpress Google Photos Importer Plugin
+Import your photos from Google Photos to Wordpress media gallery 
+
+[![Build Status](https://travis-ci.com/raulmangolin/wp-google-photos-importer.svg?branch=master)](https://travis-ci.com/raulmangolin/wp-google-photos-importer)
 
 ## Features
 * multi-user accounts
@@ -26,7 +28,7 @@ $ composer install
 ```
 
 The `vendor` directory will be created. Now you can import **Wordpress Google Photos Importer** on your Administration 
-Panel or just put it inside `wp-contents/plugins/`.
+Panel or just put it inside `wp-content/plugins/`.
 
 ## License
 This module is under GNU GENERAL PUBLIC LICENSE, but you can do what you want. It's just a bunch of code.
