@@ -16,9 +16,11 @@ Import your photos from Google Photos to Wordpress media gallery
 If you're downloading from Wordpress Plugins page, just import it on your Administration Panel and follow the 
 instructions there.
 
-You can also download the plugin [wp-google-photos-importer.zip clicking here](https://raulmangolin.dev/downloads/wp-google-photos-importer.zip). 
+You can also download the plugin clicking on the button bellow:
 
-But, if you downloaded it from Github or other place, you may have to install some dependencies using **Composer**.
+[![Download Wordpress Google Photos Importer Plugin](https://img.shields.io/badge/Download-here-blue?style=for-the-badge&logo=download)](https://raulmangolin.dev/downloads/wp-google-photos-importer.zip)
+
+But, if you cloning it from Github, you may have to install some dependencies using **Composer**.
 
 ### Composer Install
 First, download and install composer: https://getcomposer.org/download/
