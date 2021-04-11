@@ -26,7 +26,7 @@ $ composer install
 ```
 
 The `vendor` directory will be created. Now you can import **Wordpress Google Photos Importer** on your Administration 
-Panel or just put it inside `wp-contents/plugins/`.
+Panel or just put it inside `wp-content/plugins/`.
 
 ## License
 This module is under GNU GENERAL PUBLIC LICENSE, but you can do what you want. It's just a bunch of code.
