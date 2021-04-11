@@ -17,6 +17,8 @@ instructions there.
 But, if you downloaded it from Github or other place, you have to install some dependencies using **Composer**.
 
 ### Composer Install
+First, download and install composer: https://getcomposer.org/download/
+
 At the root path of the plugin, run the following command:
 
 ```shell
