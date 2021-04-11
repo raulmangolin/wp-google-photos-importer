@@ -1,5 +1,7 @@
-# Wordpress Google Photos Importer Plugin [![Build Status](https://travis-ci.com/raulmangolin/wp-google-photos-importer.svg?branch=master)](https://travis-ci.com/raulmangolin/wp-google-photos-importer)
-Import your photos from Google Photos to Wordpress media gallery
+# Wordpress Google Photos Importer Plugin
+Import your photos from Google Photos to Wordpress media gallery 
+
+[![Build Status](https://travis-ci.com/raulmangolin/wp-google-photos-importer.svg?branch=master)](https://travis-ci.com/raulmangolin/wp-google-photos-importer)
 
 ## Features
 * multi-user accounts
